@@ -78,7 +78,7 @@
 <div class="modalback" id="goalModal"><div class="modal"><h3>Create a savings goal</h3><div class="field"><label>Goal name</label><input id="goalName" placeholder="e.g. Emergency fund"></div><div class="fieldrow"><div class="field"><label>Target amount (₹)</label><input id="goalTarget" type="number" min="1"></div><div class="field"><label>Current amount (₹)</label><input id="goalCurrent" type="number" min="0" value="0"></div></div><div class="field"><label>Target date</label><input id="goalDate" type="date"></div><div class="modalactions"><button class="btn ghost" onclick="closeGoalModal()">Cancel</button><button class="btn" onclick="createGoal()">Create goal</button></div></div></div><div class="toast" id="toast"></div>
 <script src="./config.js"></script>
 <script>
-const API=(window.FINPILOT_API_URL||localStorage.getItem('finpilot_api')||'http://localhost:8000').replace(/\/$/,'');
+const API=(window.FINPILOT_API_URL="https://fin-plot-ai-1.onrender.com"||localStorage.getItem('finpilot_api')||'https://fin-plot-ai-1.onrender.com').replace(/\/$/,'');
 let profile={income:50000,fixed_costs:18000,emergency_fund:30000,emergency_target:50000,priority:'Build emergency fund',notes:''};
 let transactions=[
 {id:1,merchant:'Salary credit',amount:50000,date:'2026-11-01',category:'Income',type:'credit'},
